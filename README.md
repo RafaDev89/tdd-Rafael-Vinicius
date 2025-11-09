@@ -1,65 +1,50 @@
-# 🧠 Gerenciador de Tarefas — Test-Driven Development (TDD)
+<div align="center">
 
-Este projeto implementa um **Gerenciador de Tarefas Pessoais** em **Python**, desenvolvido seguindo o método **TDD (Test-Driven Development)**, ou seja:
+# ✅ Gerenciador de Tarefas — Projeto em Python
 
-> **RED → GREEN → REFACTOR**
-
-O objetivo é demonstrar o processo completo de criação de um sistema simples e testável, evoluindo o código apenas quando um teste falhar.
+</div>
 
 ---
 
-## 📋 Funcionalidades
+## 🧾 **Resumo do Projeto**
 
-O sistema permite:
-- ✅ Criar tarefas com **título** e **descrição**  
-- 📋 Listar todas as tarefas  
-- ✔️ Marcar uma tarefa como concluída  
-- ❌ Remover tarefas  
-- 🚫 Impedir o cadastro de tarefas com **título duplicado** ou **sem título**
+Este projeto consiste em um **Gerenciador de Tarefas Pessoais** desenvolvido em **Python**, com o objetivo de aplicar os conceitos do **TDD (Test-Driven Development)** — Desenvolvimento Orientado por Testes.  
+
+A ideia principal é construir um sistema simples e funcional de gerenciamento de tarefas, garantindo que cada funcionalidade seja implementada apenas após o sucesso dos testes automatizados.
 
 ---
 
-## 🧩 Estrutura do Projeto
+## 🎯 **Objetivo**
 
-gerenciador_tarefas/
-│
-├── tarefa.py # Classe Tarefa
-├── gerenciador.py # Classe GerenciadorTarefas
-└── test_gerenciador.py # Testes automatizados (pytest)
+O sistema foi criado para **organizar tarefas pessoais**, permitindo ao usuário:
+- Criar tarefas com título e descrição.  
+- Listar todas as tarefas cadastradas.  
+- Marcar tarefas como **concluídas**.  
+- Remover tarefas da lista.  
+- Impedir o cadastro de tarefas com **título duplicado** ou **sem título**.
 
+Além disso, o projeto demonstra **boas práticas de programação**, como:
+- Escrita de código limpo e modular.  
+- Separação entre regras de negócio e dados.  
+- Uso de testes automatizados com **pytest**.  
 
 ---
 
-## ⚙️ Pré-requisitos
+## 🔄 **Metodologia — Ciclo TDD**
 
-- [Python 3.10+](https://www.python.org/downloads/)
-- [pytest](https://docs.pytest.org/en/stable/)
+O desenvolvimento seguiu o ciclo clássico do **TDD**:
 
-Instale o pytest com:
+| Etapa | Nome | Descrição |
+|:------|:------|:-----------|
+| 🔴 RED | Escreve-se um **teste que falha propositalmente** antes da implementação. |
+| 🟢 GREEN | Implementa-se o **código mínimo necessário** para o teste passar. |
+| 🧼 REFACTOR | Refatora-se o código, mantendo todos os testes passando. |
 
-pip install pytest
+Este método garante **qualidade, confiabilidade e clareza** no desenvolvimento do sistema.
 
-🧪 Executando os testes
+---
 
-Abra o terminal na pasta do projeto:
-
-cd caminho/para/gerenciador_tarefas
-
-Execute o pytest:
-
-pytest -v
-
-
-O pytest exibirá o resultado de cada teste, por exemplo:
-
-=========================== test session starts ============================
-collected 3 items
-
-test_gerenciador.py::test_adicionar_tarefa PASSED
-test_gerenciador.py::test_nao_permite_titulo_vazio_ou_duplicado PASSED
-test_gerenciador.py::test_concluir_e_remover_tarefa PASSED
-
-============================ 3 passed in 0.10s =============================
+## 🧩 **Estrutura do Projeto**
 
 🔄 Ciclo TDD utilizado
 
