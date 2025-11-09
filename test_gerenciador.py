@@ -21,3 +21,14 @@ def test_nao_permite_titulo_vazio_ou_duplicado():
     with pytest.raises(ValueError):
         g.adicionar_tarefa("Estudar", "Duplicado")
 
+def test_concluir_e_remover_tarefa():
+    g = GerenciadorTarefas()
+    g.adicionar_tarefa("Estudar", "Aprender TDD")
+
+    g.concluir_tarefa("Estudar")
+    assert g.listar_tarefas()[0]["status"] == "concluída"
+
+    g.remover_tarefa("Estudar")
+    assert len(g.listar_tarefas()) == 0
+
+
